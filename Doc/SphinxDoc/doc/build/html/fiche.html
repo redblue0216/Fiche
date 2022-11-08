@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-cn" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fiche package &mdash; fiche 0.1 文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="code" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> fiche
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">code</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">fiche package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fiche.cli">fiche.cli module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fiche.cons">fiche.cons module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fiche.data">fiche.data module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fiche.observer_mode">fiche.observer_mode module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id10">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fiche.orm">fiche.orm module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fiche.service">fiche.service module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id16">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fiche.util">fiche.util module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id19">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fiche">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">fiche</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">code</a> &raquo;</li>
+      <li>fiche package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/fiche.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fiche-package">
+<h1>fiche package<a class="headerlink" href="#fiche-package" title="永久链接至标题">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="module-fiche.cli">
+<span id="fiche-cli-module"></span><h2>fiche.cli module<a class="headerlink" href="#module-fiche.cli" title="永久链接至标题">¶</a></h2>
+<section id="id1">
+<h3>模块介绍<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p>这是一个fiche常用命令行接口类</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）click</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）fiche程序管理</p>
+</div></blockquote>
+</section>
+<section id="id2">
+<h3>使用示例<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id3">
+<h3>类说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="module-fiche.cons">
+<span id="fiche-cons-module"></span><h2>fiche.cons module<a class="headerlink" href="#module-fiche.cons" title="永久链接至标题">¶</a></h2>
+<section id="id4">
+<h3>模块介绍<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>这是一个具体数据模型类整理模块</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>（1）  无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）fiche具体数据模型类整理</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）fiche具体数据模型类整理</p>
+</div></blockquote>
+</section>
+<section id="id5">
+<h3>使用示例<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id6">
+<h3>类说明<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.cons.Algorithm_Info">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.cons.</span></span><span class="sig-name descname"><span class="pre">Algorithm_Info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.cons.Algorithm_Info" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#fiche.orm.Models" title="fiche.orm.Models"><code class="xref py py-class docutils literal notranslate"><span class="pre">fiche.orm.Models</span></code></a></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个算法包信息的数据模型</p>
+</div></blockquote>
+<dl class="simple">
+<dt>属性功能：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+config (str): 配置指导
+ramark (str): 备注
+homepage (str): 官方文档
+author (str): 作者
+authoremail (str): 作者邮箱
+license (str): 开源协议
+requires (str): 依赖
+requiredby (str): 被依赖</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.cons.Application_Info">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.cons.</span></span><span class="sig-name descname"><span class="pre">Application_Info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.cons.Application_Info" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#fiche.orm.Models" title="fiche.orm.Models"><code class="xref py py-class docutils literal notranslate"><span class="pre">fiche.orm.Models</span></code></a></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个应用信息的数据模型</p>
+</div></blockquote>
+<dl class="simple">
+<dt>属性功能：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+config (str): 配置指导
+remark (str): 备注
+requires (str): 依赖
+project (str): 项目</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.cons.Dataset_Info">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.cons.</span></span><span class="sig-name descname"><span class="pre">Dataset_Info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.cons.Dataset_Info" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#fiche.orm.Models" title="fiche.orm.Models"><code class="xref py py-class docutils literal notranslate"><span class="pre">fiche.orm.Models</span></code></a></p>
+<p>类介绍；</p>
+<blockquote>
+<div><p>这是一个数据集信息的数据模型</p>
+</div></blockquote>
+<dl class="simple">
+<dt>属性功能：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+config (str): 配置指导
+remark (str): 备注
+requiredby (str): 被依赖
+datatype (str): 数据类型
+project (str): 项目</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.cons.Model_Info">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.cons.</span></span><span class="sig-name descname"><span class="pre">Model_Info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.cons.Model_Info" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#fiche.orm.Models" title="fiche.orm.Models"><code class="xref py py-class docutils literal notranslate"><span class="pre">fiche.orm.Models</span></code></a></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个模型信息的数据模型</p>
+</div></blockquote>
+<dl class="simple">
+<dt>属性功能：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+data (str): 依赖数据
+algorithm (str): 依赖算法
+requires (str): 依赖
+config (str): 配置
+remark (str): 备注</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.cons.Observer_Info">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.cons.</span></span><span class="sig-name descname"><span class="pre">Observer_Info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.cons.Observer_Info" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#fiche.orm.Models" title="fiche.orm.Models"><code class="xref py py-class docutils literal notranslate"><span class="pre">fiche.orm.Models</span></code></a></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个观察者信息的数据模型</p>
+</div></blockquote>
+<dl class="simple">
+<dt>属性功能：</dt><dd><p>name (str): 观察者名称
+state (str): 观察者状态
+summary (str): 简述
+config (str): 配置信息
+remark (str): 备注</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.cons.Parameter_Info">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.cons.</span></span><span class="sig-name descname"><span class="pre">Parameter_Info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.cons.Parameter_Info" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#fiche.orm.Models" title="fiche.orm.Models"><code class="xref py py-class docutils literal notranslate"><span class="pre">fiche.orm.Models</span></code></a></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个参数信息的数据模型</p>
+</div></blockquote>
+<dl class="simple">
+<dt>属性功能：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+config (str): 配置指导
+remark (str): 备注
+datatype (str): 类型
+requiredby (str): 被依赖</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+<section id="module-fiche.data">
+<span id="fiche-data-module"></span><h2>fiche.data module<a class="headerlink" href="#module-fiche.data" title="永久链接至标题">¶</a></h2>
+<section id="id7">
+<h3>模块介绍<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>这是一个fiche对外接口类，主要功能整理各种信息处理操作</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>（1）  无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）信息处理</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）整理各种信息处理操作</p>
+</div></blockquote>
+</section>
+<section id="id8">
+<h3>使用示例<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id9">
+<h3>类说明<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.data.FicheData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.data.</span></span><span class="sig-name descname"><span class="pre">FicheData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">27017</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fiche'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个fiche整理各种信息处理操作的接口类</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.add_observer">
+<span class="sig-name descname"><span class="pre">add_observer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_summary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default</span> <span class="pre">summary'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default</span> <span class="pre">config'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_remark</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default</span> <span class="pre">remark'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.add_observer" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个添加观察者的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>observer_name (str): 观察者名称
+observer_version (str): 观察者版本
+observer_summary (str): 观察者简述
+obserser_config (str): 观察者配置
+observer_remark (str): 观察者备注</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.query_algorithm_info">
+<span class="sig-name descname"><span class="pre">query_algorithm_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.query_algorithm_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个查询算法信息的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>algorithm_name (str): 算法名称
+algorithm_version (str): 算法版本</p>
+</dd>
+<dt>返回：</dt><dd><p>algorithm_info_query (dict): 查询信息字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.query_application_info">
+<span class="sig-name descname"><span class="pre">query_application_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">application_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">application_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.query_application_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个查询应用信息的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>application_name (str): 应用名称
+application_version (str): 应用版本</p>
+</dd>
+<dt>返回：</dt><dd><p>application_info_query (dict): 查询信息字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.query_dataset_info">
+<span class="sig-name descname"><span class="pre">query_dataset_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.query_dataset_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个查询应用信息的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>dataset_name (str): 应用名称
+dataset_version (str): 应用版本</p>
+</dd>
+<dt>返回：</dt><dd><p>dataset_info_query (dict): 查询信息字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.query_model_info">
+<span class="sig-name descname"><span class="pre">query_model_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.query_model_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个查询模型信息的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>model_name (str): 模型名称
+model_version (str): 模型版本</p>
+</dd>
+<dt>返回：</dt><dd><p>model_info_query (dict): 查询信息字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.query_observer_info">
+<span class="sig-name descname"><span class="pre">query_observer_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.query_observer_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个查询观察者信息的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>observer_name (str): 观察者名称
+observer_version (str): 观察者版本</p>
+</dd>
+<dt>返回：</dt><dd><p>observer_info_query (dict): 查询信息字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.query_parameter_info">
+<span class="sig-name descname"><span class="pre">query_parameter_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.query_parameter_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个查询参数信息的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>parameter_name (str): 参数名称
+parameter_version (str): 参数版本</p>
+</dd>
+<dt>返回：</dt><dd><p>parameter_info_query (dict): 查询信息字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.remove_observer">
+<span class="sig-name descname"><span class="pre">remove_observer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.remove_observer" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个删除观察者的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>observer_name (str): 观察者名称
+observer_version (str): 观察者版本</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.save_algorithm_info">
+<span class="sig-name descname"><span class="pre">save_algorithm_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">homepage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">authoremail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requires</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requiredby</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.save_algorithm_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个保存算法包信息方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+config (str): 配置指导
+ramark (str): 备注
+homepage (str): 官方文档
+author (str): 作者
+authoremail (str): 作者邮箱
+license (str): 开源协议
+requires (str): 依赖
+requiredby (str): 被依赖</p>
+</dd>
+<dt>返回：</dt><dd><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.save_application_info">
+<span class="sig-name descname"><span class="pre">save_application_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requires</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.save_application_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个保存应用信息的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+config (str): 配置指导
+ramark (str): 备注
+requires (str): 依赖
+project (str): 项目</p>
+</dd>
+<dt>返回：</dt><dd><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.save_dataset_info">
+<span class="sig-name descname"><span class="pre">save_dataset_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requiredby</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datatype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.save_dataset_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个保存数据集信息的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+config (str): 配置指导
+remark (str): 备注
+requiredby (str): 被依赖
+datatype (str): 数据类型
+project (str): 项目</p>
+</dd>
+<dt>返回：</dt><dd><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.save_model_info">
+<span class="sig-name descname"><span class="pre">save_model_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requires</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.save_model_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个保存模型信息的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数:</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+data (str): 依赖数据
+algorithm (str): 依赖算法
+requires (str): 依赖
+config (str): 配置
+remark (str): 备注</p>
+</dd>
+<dt>返回：</dt><dd><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.save_parameter_info">
+<span class="sig-name descname"><span class="pre">save_parameter_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datatype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requiredby</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.save_parameter_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个保存参数信息的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+config (str): 配置指导
+remark (str): 备注
+datatype (str): 类型
+requiredby (str): 被依赖</p>
+</dd>
+<dt>返回：</dt><dd><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.data.FicheData.show_obervers">
+<span class="sig-name descname"><span class="pre">show_obervers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fiche.data.FicheData.show_obervers" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个获取观察者的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>observers_list (list): 观察者列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-fiche.observer_mode">
+<span id="fiche-observer-mode-module"></span><h2>fiche.observer_mode module<a class="headerlink" href="#module-fiche.observer_mode" title="永久链接至标题">¶</a></h2>
+<section id="id10">
+<h3>模块介绍<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<p>这是一个观察者模式类，主要采用推模型的功能设计。</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>（1）  无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）观察者模式</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）主从节点信息管理</p>
+</div></blockquote>
+</section>
+<section id="id11">
+<h3>使用示例<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id12">
+<h3>类说明<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.observer_mode.Observable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.observer_mode.</span></span><span class="sig-name descname"><span class="pre">Observable</span></span><a class="headerlink" href="#fiche.observer_mode.Observable" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个被观察者类，主要功能管理观察者、向观察者下发通知、与元数据信息管理通信。主要技术类继承。</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.observer_mode.Observable.add_observer">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_observer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">storage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_summary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default</span> <span class="pre">summary'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default</span> <span class="pre">config'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_remark</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default</span> <span class="pre">remark'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.observer_mode.Observable.add_observer" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个添加观察者的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>storage (object): 存储对象MongoDB
+observer_name (str): 观察者名称
+observer_version (str): 观察者版本
+observer_summary (str): 观察者简述
+obserser_config (str): 观察者配置
+observer_remark (str): 观察者备注</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.observer_mode.Observable.get_observers">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_observers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">storage</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.observer_mode.Observable.get_observers" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个获取观察者的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>storage (object): 存储对象MongoDB</p>
+</dd>
+<dt>返回：</dt><dd><p>observers_list (list): 观察者列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.observer_mode.Observable.notify_observer">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">notify_observer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.observer_mode.Observable.notify_observer" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个通知观察者的方法，暂时不提供。</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>observer_name (str): 观察者名称</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.observer_mode.Observable.remove_observer">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remove_observer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">storage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.observer_mode.Observable.remove_observer" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个删除观察者的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>storage (object): 存储对象MongoDB 
+observer_name (str): 观察者名称
+observer_version (str): 观察者版本</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.observer_mode.Observable.update_observer">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update_observer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.observer_mode.Observable.update_observer" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个更新观察者的方法，暂时不提供。</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>observer_name (str): 观察者名称
+oberver_version (str): 观察者版本</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.observer_mode.Observer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.observer_mode.</span></span><span class="sig-name descname"><span class="pre">Observer</span></span><a class="headerlink" href="#fiche.observer_mode.Observer" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个观察者类，主要功能用于接受master节点发送的通知并处理，主要技术抽象方法</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.observer_mode.Observer.update">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fiche.observer_mode.Observer.update" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个更新观察者的抽象方法</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-fiche.orm">
+<span id="fiche-orm-module"></span><h2>fiche.orm module<a class="headerlink" href="#module-fiche.orm" title="永久链接至标题">¶</a></h2>
+<section id="id13">
+<h3>模块介绍<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<p>这是一个MongoDB专属的ORM模型基础模块</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>（1）  无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）type与__new__技术</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）MongoDB专属ORM模型</p>
+</div></blockquote>
+</section>
+<section id="id14">
+<h3>使用示例<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id15">
+<h3>类说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.orm.Field">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.orm.</span></span><span class="sig-name descname"><span class="pre">Field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.orm.Field" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个数据模型中的表达数据变量类型的基础类</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.orm.FieldsField">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.orm.</span></span><span class="sig-name descname"><span class="pre">FieldsField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.orm.FieldsField" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#fiche.orm.Field" title="fiche.orm.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">fiche.orm.Field</span></code></a></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个数据模型中的表达fields数据变量类型的基础类</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.orm.ModelMetaClass">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.orm.</span></span><span class="sig-name descname"><span class="pre">ModelMetaClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.orm.ModelMetaClass" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个MongoDB数据模型构建类，主要用于抽象数据类型的构建过程。</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.orm.Models">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.orm.</span></span><span class="sig-name descname"><span class="pre">Models</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.orm.Models" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个InfluxDB数据模型类，主要用于抽象InfluxDB数据表结果。</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.orm.Models.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">storage</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.orm.Models.save" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个保存数据模型中的数据到mongodb中的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>storage (object): 存储器对象(MongoDB)</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 执行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.orm.TagsField">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.orm.</span></span><span class="sig-name descname"><span class="pre">TagsField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'str'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.orm.TagsField" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#fiche.orm.Field" title="fiche.orm.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">fiche.orm.Field</span></code></a></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个数据模型中的表达fields数据变量类型的基础类</p>
+</div></blockquote>
+</dd></dl>
+
+</section>
+</section>
+<section id="module-fiche.service">
+<span id="fiche-service-module"></span><h2>fiche.service module<a class="headerlink" href="#module-fiche.service" title="永久链接至标题">¶</a></h2>
+<section id="id16">
+<h3>模块介绍<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<p>这是一个fiche服务应用路由类，主要使用fastspi搭建ASGI服务器</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）fastapi</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）fiche服务应用路由</p>
+</div></blockquote>
+</section>
+<section id="id17">
+<h3>使用示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id18">
+<h3>类说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.add_observer">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">add_observer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.add_observer" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个添加观察者信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>observer_name (str): 观察者名称
+observer_version (str): 观察者版本</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.query_algorithm_info">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">query_algorithm_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.query_algorithm_info" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个查询算法信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>algorithm_name(str): 算法名称
+algorithm_version(str): 算法版本</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.query_application_info">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">query_application_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">application_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">application_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.query_application_info" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个查询应用信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>application_name (str): 应用名称
+application_version (str): 应用版本</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.query_dataset_info">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">query_dataset_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.query_dataset_info" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个查询数据信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>dataset_name (str): 数据名称
+dataset_version (str): 数据版本</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.query_model_info">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">query_model_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.query_model_info" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个查询模型信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>model_name (str): 模型名称
+model_version (str): 模型版本</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.query_observer">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">query_observer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.query_observer" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个查询观察者信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>observer_name (str): 观察者名称
+observer_version (str): 观察者版本</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.query_parameter_info">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">query_parameter_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.query_parameter_info" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个查询参数信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>parameter_name (str): 参数名称
+parameter_version (str): 参数版本</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.remove_observer">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">remove_observer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.remove_observer" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个删除观察者信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>observer_name (str): 观察者名称
+observer_version (str): 观察者版本</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.save_algorithm_info">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">save_algorithm_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">homepage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">authoremail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requires</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requiredby</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.save_algorithm_info" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个保存算法信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+config (str): 配置指导
+ramark (str): 备注
+homepage (str): 官方文档
+author (str): 作者
+authoremail (str): 作者邮箱
+license (str): 开源协议
+requires (str): 依赖
+requiredby (str): 被依赖</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.save_application_info">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">save_application_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requires</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.save_application_info" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个保存应用信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+config (str): 配置指导
+remark (str): 备注
+requires (str): 依赖
+project (str): 项目</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.save_dataset_info">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">save_dataset_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requiredby</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datatype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.save_dataset_info" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个保存数据信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+config (str): 配置指导
+remark (str): 备注
+requiredby (str): 被依赖
+datatype (str): 数据类型
+project (str): 项目</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.save_model_info">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">save_model_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requires</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.save_model_info" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个保存模型信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+data (str): 依赖数据
+algorithm (str): 依赖算法
+requires (str): 依赖
+config (str): 配置
+remark (str): 备注</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fiche.service.save_parameter_info">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.service.</span></span><span class="sig-name descname"><span class="pre">save_parameter_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datatype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requiredby</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.service.save_parameter_info" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个保存参数信息的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>name (str): 算法包名称
+version (str): 版本
+summary (str): 简述
+config (str): 配置指导
+remark (str): 备注
+datatype (str): 类型
+requiredby (str): 被依赖</p>
+</dd>
+<dt>返回：</dt><dd><p>result (json): json结果字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+<section id="module-fiche.util">
+<span id="fiche-util-module"></span><h2>fiche.util module<a class="headerlink" href="#module-fiche.util" title="永久链接至标题">¶</a></h2>
+<section id="id19">
+<h3>模块介绍<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<p>这是一个工具辅助模块</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>（1）  无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）MongoDB信息管理</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）MongoDB管理JSON</p>
+</div></blockquote>
+</section>
+<section id="id20">
+<h3>使用示例<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id21">
+<h3>类说明<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="fiche.util.MongoManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fiche.util.</span></span><span class="sig-name descname"><span class="pre">MongoManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.util.MongoManager" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个MongoDB数据库连接管理类</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.util.MongoManager.create_mongodb_client">
+<span class="sig-name descname"><span class="pre">create_mongodb_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fiche.util.MongoManager.create_mongodb_client" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个连接mongodb的方法，从MongoManager实例参数中获取方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>mongodb_collection (object): mongodb客户端对象-mongodb集合</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.util.MongoManager.delete_info">
+<span class="sig-name descname"><span class="pre">delete_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.util.MongoManager.delete_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个删除信息json串的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>query (dict): mongodb查询字典</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 删除成功信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.util.MongoManager.insert_info">
+<span class="sig-name descname"><span class="pre">insert_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info_dict_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.util.MongoManager.insert_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个插入信息json串的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>info_dict_list (list): 信息字典列表</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 插入成功信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.util.MongoManager.query_info">
+<span class="sig-name descname"><span class="pre">query_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.util.MongoManager.query_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个查询信息json串的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>query (dict): mongodb查询字典</p>
+</dd>
+<dt>返回：</dt><dd><p>result_iter (object): 查询结果</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fiche.util.MongoManager.update_info">
+<span class="sig-name descname"><span class="pre">update_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fiche.util.MongoManager.update_info" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个更新信息json串的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>query (dict): mongodb查询字典
+update (dict): mongodb更新字典</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 更新成功信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-fiche">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-fiche" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, shihua.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

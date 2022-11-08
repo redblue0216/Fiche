@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-cn" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>快速指南 &mdash; fiche 0.1 文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="设计" href="%E8%AE%BE%E8%AE%A1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> fiche
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="%E5%AE%89%E8%A3%85.html">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E4%BB%8B%E7%BB%8D.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E8%AE%BE%E8%AE%A1.html">设计</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">快速指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">服务端使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">客户端使用</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#http">http接口使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-sdk">python-sdk使用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">fiche</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>快速指南</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/快速指南.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>快速指南<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<section id="id2">
+<h2>服务端使用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>对于服务端数据服务启动，使用fiche命令开启后台服务。注意，后端mongodb的配置需要在安装包内的fiche_config.yaml中配置</p>
+<p>以下是dasharectl命令行示例：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ fichectl start-service
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>客户端使用<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>对于客户端，fiche支持http协议的接口和python-sdk两种方式。</p>
+<section id="http">
+<h3>http接口使用<a class="headerlink" href="#http" title="永久链接至标题">¶</a></h3>
+<p>1.添加观察者</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl http://127.0.0.1:11811/observer/add_observer?observer_name<span class="o">=</span>test007<span class="p">&amp;</span><span class="nv">observer_version</span><span class="o">=</span>v007
+</pre></div>
+</div>
+<p>2.查询观察者</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl http://127.0.0.1:11811/observer/add_observer?observer_name<span class="o">=</span>test007<span class="p">&amp;</span><span class="nv">observer_version</span><span class="o">=</span>v0076
+</pre></div>
+</div>
+<p>3.删除观察者</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl http://127.0.0.1:11811/observer/remove_observer?observer_name<span class="o">=</span>test004<span class="p">&amp;</span><span class="nv">observer_version</span><span class="o">=</span>v004
+</pre></div>
+</div>
+<p>4.保存算法信息</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ http://127.0.0.1:11811/info_manager/save_algorithm_info?name<span class="o">=</span>test007<span class="p">&amp;</span><span class="nv">version</span><span class="o">=</span>v007<span class="p">&amp;</span><span class="nv">summary</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">config</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">remark</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">homepage</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">author</span><span class="o">=</span>shihua<span class="p">&amp;</span><span class="nv">authoremail</span><span class="o">=</span><span class="m">150214087952163</span>.com<span class="p">&amp;</span><span class="nv">license</span><span class="o">=</span>MIT<span class="p">&amp;</span><span class="nv">requires</span><span class="o">=</span>numpy,tensorflow<span class="p">&amp;</span><span class="nv">requiredby</span><span class="o">=</span>wpfsystem
+</pre></div>
+</div>
+<p>5.查询算法信息</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ http://127.0.0.1:11811/info_manager/query_algorithm_info?algorithm_name<span class="o">=</span>test007<span class="p">&amp;</span><span class="nv">algorithm_version</span><span class="o">=</span>v007
+</pre></div>
+</div>
+<p>6.保存模型信息</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ http://127.0.0.1:11811/info_manager/save_model_info?name<span class="o">=</span>test007<span class="p">&amp;</span><span class="nv">version</span><span class="o">=</span>v007<span class="p">&amp;</span><span class="nv">summary</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">config</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">remark</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">requires</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">data</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">algorithm</span><span class="o">=</span>test005
+</pre></div>
+</div>
+<p>7.查询模型信息</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ http://127.0.0.1:11811/info_manager/query_model_info?model_name<span class="o">=</span>test007<span class="p">&amp;</span><span class="nv">model_version</span><span class="o">=</span>v007
+</pre></div>
+</div>
+<p>8.保存参数信息</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ http://127.0.0.1:11811/info_manager/save_parameter_info?name<span class="o">=</span>test007<span class="p">&amp;</span><span class="nv">version</span><span class="o">=</span>v007<span class="p">&amp;</span><span class="nv">summary</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">config</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">remark</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">datatype</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">requiredby</span><span class="o">=</span>wpfsystem
+</pre></div>
+</div>
+<p>9.查询参数信息</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ http://127.0.0.1:11811/info_manager/query_parameter_info?parameter_name<span class="o">=</span>test007<span class="p">&amp;</span><span class="nv">parameter_version</span><span class="o">=</span>v007
+</pre></div>
+</div>
+<p>10.保存应用信息</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ http://127.0.0.1:11811/info_manager/save_application_info?name<span class="o">=</span>test007<span class="p">&amp;</span><span class="nv">version</span><span class="o">=</span>v007<span class="p">&amp;</span><span class="nv">summary</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">config</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">remark</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">requires</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">project</span><span class="o">=</span>wpfsystem
+</pre></div>
+</div>
+<p>11.查询应用信息</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ http://127.0.0.1:11811/info_manager/query_application_info?application_name<span class="o">=</span>test007<span class="p">&amp;</span><span class="nv">application_version</span><span class="o">=</span>v007
+</pre></div>
+</div>
+<p>12.保存数据信息</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ http://127.0.0.1:11811/info_manager/save_dataset_info?name<span class="o">=</span>test007<span class="p">&amp;</span><span class="nv">version</span><span class="o">=</span>v007<span class="p">&amp;</span><span class="nv">summary</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">config</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">remark</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">requiredby</span><span class="o">=</span>wpfsystem<span class="p">&amp;</span><span class="nv">datatype</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">project</span><span class="o">=</span><span class="nb">test</span>
+</pre></div>
+</div>
+<p>13.查询数据信息</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ http://127.0.0.1:11811/info_manager/query_dataset_info?dataset_name<span class="o">=</span>test007<span class="p">&amp;</span><span class="nv">dataset_version</span><span class="o">=</span>v007
+</pre></div>
+</div>
+</section>
+<section id="python-sdk">
+<h3>python-sdk使用<a class="headerlink" href="#python-sdk" title="永久链接至标题">¶</a></h3>
+<p>以下是dashare主程脚本代码示例：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fiche.data</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<span class="n">fiche</span> <span class="o">=</span> <span class="n">FicheData</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;192.168.0.111&#39;</span><span class="p">,</span>
+                  <span class="n">port</span><span class="o">=</span><span class="mi">27017</span><span class="p">,</span>
+                  <span class="n">username</span><span class="o">=</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span>
+                  <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123456&#39;</span><span class="p">,</span>
+                  <span class="n">database</span><span class="o">=</span><span class="s1">&#39;fiche&#39;</span><span class="p">)</span>
+
+
+<span class="c1">### 增加观察者</span>
+<span class="n">fiche</span><span class="o">.</span><span class="n">add_observer</span><span class="p">(</span><span class="n">observer_name</span><span class="o">=</span><span class="s1">&#39;test008&#39;</span><span class="p">,</span><span class="n">observer_version</span><span class="o">=</span><span class="s1">&#39;v008&#39;</span><span class="p">)</span>
+<span class="c1"># fiche.add_observer(observer_name=&#39;test002&#39;,observer_version=&#39;v002&#39;)</span>
+<span class="c1"># fiche.add_observer(observer_name=&#39;test_remove&#39;,observer_version=&#39;test_remove001&#39;)</span>
+
+<span class="c1">### 查询观察者</span>
+<span class="n">tmp_observer_info_query</span> <span class="o">=</span> <span class="n">fiche</span><span class="o">.</span><span class="n">query_observer_info</span><span class="p">(</span><span class="n">observer_name</span><span class="o">=</span><span class="s1">&#39;test007&#39;</span><span class="p">,</span><span class="n">observer_version</span><span class="o">=</span><span class="s1">&#39;v007&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tmp_observer_info_query</span><span class="p">)</span>
+
+<span class="c1">### 获取观察者列表</span>
+<span class="n">tmp_observers_list</span> <span class="o">=</span> <span class="n">fiche</span><span class="o">.</span><span class="n">show_obervers</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tmp_observers_list</span><span class="p">)</span>
+
+<span class="c1">### 删除观察者</span>
+<span class="n">fiche</span><span class="o">.</span><span class="n">remove_observer</span><span class="p">(</span><span class="n">observer_name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">observer_version</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">)</span>
+
+<span class="c1">## 保存算法信息</span>
+<span class="n">fiche</span><span class="o">.</span><span class="n">save_algorithm_info</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;test008&#39;</span><span class="p">,</span>
+                          <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;v008&#39;</span><span class="p">,</span>
+                          <span class="n">summary</span> <span class="o">=</span> <span class="s1">&#39;this is a test algorithm package&#39;</span><span class="p">,</span>
+                          <span class="n">config</span> <span class="o">=</span> <span class="s1">&#39;bash xxxxx.sh&#39;</span><span class="p">,</span>
+                          <span class="n">remark</span> <span class="o">=</span> <span class="s1">&#39;test algorithm remark&#39;</span><span class="p">,</span>
+                          <span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;xxx.xxx.xxx.xxx/xxxx&#39;</span><span class="p">,</span>
+                          <span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;shihua&#39;</span><span class="p">,</span>
+                          <span class="n">authoremail</span> <span class="o">=</span> <span class="s1">&#39;15021408795@163.com&#39;</span><span class="p">,</span>
+                          <span class="n">license</span> <span class="o">=</span> <span class="s1">&#39;MIT&#39;</span><span class="p">,</span>
+                          <span class="n">requires</span> <span class="o">=</span> <span class="s1">&#39;numpy,sklearn,tensorflow&#39;</span><span class="p">,</span>
+                          <span class="n">requiredby</span> <span class="o">=</span> <span class="s1">&#39;WPFsystem&#39;</span><span class="p">)</span>
+
+<span class="c1">### 查询算法信息</span>
+<span class="n">tmp_algorithm_info_query</span> <span class="o">=</span> <span class="n">fiche</span><span class="o">.</span><span class="n">query_algorithm_info</span><span class="p">(</span><span class="n">algorithm_name</span><span class="o">=</span><span class="s1">&#39;test008&#39;</span><span class="p">,</span><span class="n">algorithm_version</span><span class="o">=</span><span class="s1">&#39;v008&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tmp_algorithm_info_query</span><span class="p">)</span>
+
+<span class="c1">### 保存模型信息</span>
+<span class="n">fiche</span><span class="o">.</span><span class="n">save_model_info</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;test008&#39;</span><span class="p">,</span>
+                      <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;v008&#39;</span><span class="p">,</span>
+                      <span class="n">summary</span> <span class="o">=</span> <span class="s1">&#39;this is a test model&#39;</span><span class="p">,</span>
+                      <span class="n">config</span> <span class="o">=</span> <span class="s1">&#39;bash xxxxxxx.sh&#39;</span><span class="p">,</span>
+                      <span class="n">remark</span> <span class="o">=</span> <span class="s1">&#39;test model remark&#39;</span><span class="p">,</span>
+                      <span class="n">requires</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
+                      <span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;test data set&#39;</span><span class="p">,</span>
+                      <span class="n">algorithm</span> <span class="o">=</span> <span class="s1">&#39;test algorithm&#39;</span><span class="p">)</span>
+
+<span class="c1">### 查询模型信息</span>
+<span class="n">tmp_model_info_query</span> <span class="o">=</span> <span class="n">fiche</span><span class="o">.</span><span class="n">query_model_info</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s1">&#39;test008&#39;</span><span class="p">,</span><span class="n">model_version</span><span class="o">=</span><span class="s1">&#39;v008&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tmp_model_info_query</span><span class="p">)</span>
+
+<span class="c1">### 保存参数信息</span>
+<span class="n">fiche</span><span class="o">.</span><span class="n">save_parameter_info</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;test008&#39;</span><span class="p">,</span>
+                          <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;v008&#39;</span><span class="p">,</span>
+                          <span class="n">summary</span> <span class="o">=</span> <span class="s1">&#39;this is a test parameter&#39;</span><span class="p">,</span>
+                          <span class="n">config</span> <span class="o">=</span> <span class="s1">&#39;bash xxxxxxxxxxx.sh&#39;</span><span class="p">,</span>
+                          <span class="n">remark</span> <span class="o">=</span> <span class="s1">&#39;test parameter remark&#39;</span><span class="p">,</span>
+                          <span class="n">datatype</span> <span class="o">=</span> <span class="s1">&#39;test datatype&#39;</span><span class="p">,</span>
+                          <span class="n">requiredby</span> <span class="o">=</span> <span class="s1">&#39;test model&#39;</span><span class="p">)</span>
+
+<span class="c1">### 查询参数信息</span>
+<span class="n">tmp_parameter_info_query</span> <span class="o">=</span> <span class="n">fiche</span><span class="o">.</span><span class="n">query_parameter_info</span><span class="p">(</span><span class="n">parameter_name</span><span class="o">=</span><span class="s1">&#39;test008&#39;</span><span class="p">,</span><span class="n">parameter_version</span><span class="o">=</span><span class="s1">&#39;v008&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tmp_parameter_info_query</span><span class="p">)</span>
+
+<span class="c1">### 保存应用信息</span>
+<span class="n">fiche</span><span class="o">.</span><span class="n">save_application_info</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;test008&#39;</span><span class="p">,</span>
+                            <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;v008&#39;</span><span class="p">,</span>
+                            <span class="n">summary</span> <span class="o">=</span> <span class="s1">&#39;this is a test application&#39;</span><span class="p">,</span>
+                            <span class="n">config</span> <span class="o">=</span> <span class="s1">&#39;bash xxxxxxxxxxxxx.sh&#39;</span><span class="p">,</span>
+                            <span class="n">remark</span> <span class="o">=</span> <span class="s1">&#39;test application remark&#39;</span><span class="p">,</span>
+                            <span class="n">requires</span> <span class="o">=</span> <span class="s1">&#39;xxx algorithm,xxxxx data&#39;</span><span class="p">,</span>
+                            <span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;wpf system&#39;</span><span class="p">)</span>
+
+<span class="c1">### 查询应用信息</span>
+<span class="n">tmp_application_info_query</span> <span class="o">=</span> <span class="n">fiche</span><span class="o">.</span><span class="n">query_application_info</span><span class="p">(</span><span class="n">application_name</span><span class="o">=</span><span class="s1">&#39;test008&#39;</span><span class="p">,</span><span class="n">application_version</span><span class="o">=</span><span class="s1">&#39;v008&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tmp_application_info_query</span><span class="p">)</span>
+
+<span class="c1">### 保存数据信息</span>
+<span class="n">fiche</span><span class="o">.</span><span class="n">save_dataset_info</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;test008&#39;</span><span class="p">,</span>
+                        <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;v008&#39;</span><span class="p">,</span>
+                        <span class="n">summary</span> <span class="o">=</span> <span class="s1">&#39;this is a test dataset&#39;</span><span class="p">,</span>
+                        <span class="n">config</span> <span class="o">=</span> <span class="s1">&#39;bash xxxxxxxxxxxxx.sh&#39;</span><span class="p">,</span>
+                        <span class="n">remark</span> <span class="o">=</span> <span class="s1">&#39;test dataset&#39;</span><span class="p">,</span>
+                        <span class="n">requiredby</span> <span class="o">=</span> <span class="s1">&#39;test model,test application&#39;</span><span class="p">,</span>
+                        <span class="n">datatype</span> <span class="o">=</span> <span class="s1">&#39;test datatype&#39;</span><span class="p">,</span>
+                        <span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;pv system&#39;</span><span class="p">)</span>
+
+<span class="c1">### 查询数据信息</span>
+<span class="n">tmp_dataset_info_query</span> <span class="o">=</span> <span class="n">fiche</span><span class="o">.</span><span class="n">query_dataset_info</span><span class="p">(</span><span class="n">dataset_name</span><span class="o">=</span><span class="s1">&#39;test008&#39;</span><span class="p">,</span><span class="n">dataset_version</span><span class="o">=</span><span class="s1">&#39;v008&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tmp_dataset_info_query</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="%E8%AE%BE%E8%AE%A1.html" class="btn btn-neutral float-left" title="设计" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, shihua.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

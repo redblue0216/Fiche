@@ -1,0 +1,203 @@
+# Fiche-元数据信息管理工具
+
+![shields_version](/static/shields_version.svg)    ![shields_license](/static/shields_license.svg)    ![shields_author](/static/shields_author.svg)    ![shiedls_python](/static/shields_python.svg)
+
+![fichesymbol](/static/fichesymbol.JPG)
+
+## 介绍
++ Fiche是一个元数据信息管理工具，主要功能提供元数据信息的管理，包括算法信息、模型信息、参数信息、应用信息和数据信息五大类信息；主要设计采用将信息卡片化，存储为一个个json字符串文档，采用主从推送模型实现观察者模式，便于信息中心化；主要技术采用MongoDB作为后端信息数据的中心存储，基于FastAPI实现的http服务使得该工具提供python-sdk的同时也与语言无关。
+
+
+## 安装
+fiche采用Python开发，得益于Python良好的社区环境，安装支持Pythonic风格的各种管理器。
+```
+	$ pip install fiche-0.1-xxxxxxxxxxxx.whl
+```
+
+
+## 快速指南
+
+### 服务端使用
++ 对于服务端数据服务启动，使用fiche命令开启后台服务。注意，后端mongodb的配置需要在安装包内的fiche_config.yaml中配置。以下是fichectl命令行示例：
+
+```bash
+	$ fichectl start-service 
+````
+
+### 客户端使用
++ 对于客户端，fiche支持http协议的接口和python-sdk两种方式。
+
++ http接口使用
+  1.添加观察者
+```bash
+  	$ curl http://127.0.0.1:11811/observer/add_observer?observer_name=test007&observer_version=v007
+```
+  2.查询观察者
+```bash
+  	$ curl http://127.0.0.1:11811/observer/add_observer?observer_name=test007&observer_version=v0076
+```
+  3.删除观察者
+```bash
+  	$ curl http://127.0.0.1:11811/observer/remove_observer?observer_name=test004&observer_version=v004
+```
+  4.保存算法信息
+```bash
+  	$ curl http://127.0.0.1:11811/info_manager/save_algorithm_info?name=test007&version=v007&summary=test&config=test&remark=test&homepage=test&author=shihua&authoremail=150214087952163.com&license=MIT&requires=numpy,tensorflow&requiredby=wpfsystem
+```
+  5.查询算法信息
+```bash
+  	$ curl http://127.0.0.1:11811/info_manager/query_algorithm_info?algorithm_name=test007&algorithm_version=v007
+```
+  6.保存模型信息
+```bash
+  	$ curl http://127.0.0.1:11811/info_manager/save_model_info?name=test007&version=v007&summary=test&config=test&remark=test&requires=test&data=test&algorithm=test005
+```
+  7.查询模型信息
+```bash
+  	$ curl http://127.0.0.1:11811/info_manager/query_model_info?model_name=test007&model_version=v007
+```
+  8.保存参数信息
+```bash
+  	$ curl http://127.0.0.1:11811/info_manager/save_parameter_info?name=test007&version=v007&summary=test&config=test&remark=test&datatype=test&requiredby=wpfsystem
+```
+  9.查询参数信息
+```bash
+  	$ curl http://127.0.0.1:11811/info_manager/query_parameter_info?parameter_name=test007&parameter_version=v007
+```
+  10.保存应用信息
+```bash
+  	$ curl http://127.0.0.1:11811/info_manager/save_application_info?name=test007&version=v007&summary=test&config=test&remark=test&requires=test&project=wpfsystem
+```
+  11.查询应用信息
+```bash
+  	$ curl http://127.0.0.1:11811/info_manager/query_application_info?application_name=test007&application_version=v007
+```
+  12.保存数据信息
+```bash
+  	$ curl http://127.0.0.1:11811/info_manager/save_dataset_info?name=test007&version=v007&summary=test&config=test&remark=test&requiredby=wpfsystem&datatype=test&project=test
+```
+  13.查询数据信息
+```bash
+  	$ curl http://127.0.0.1:11811/info_manager/query_dataset_info?dataset_name=test007&dataset_version=v007
+```
++ python-sdk使用,以下是fiche主程脚本代码示例：
+```python
+	from fiche.data import *
+
+
+	fiche = FicheData(host='192.168.0.111',
+	                  port=27017,
+	                  username='admin',
+	                  password='123456',
+	                  database='fiche')
+
+
+	### 增加观察者
+	fiche.add_observer(observer_name='test008',observer_version='v008')
+	# fiche.add_observer(observer_name='test002',observer_version='v002')
+	# fiche.add_observer(observer_name='test_remove',observer_version='test_remove001')
+
+	### 查询观察者
+	tmp_observer_info_query = fiche.query_observer_info(observer_name='test007',observer_version='v007')
+	print(tmp_observer_info_query)
+
+	### 获取观察者列表
+	tmp_observers_list = fiche.show_obervers()
+	print(tmp_observers_list) 
+
+	### 删除观察者
+	fiche.remove_observer(observer_name='test',observer_version='001')
+
+	## 保存算法信息
+	fiche.save_algorithm_info(name = 'test008',
+	                          version = 'v008',
+	                          summary = 'this is a test algorithm package',
+	                          config = 'bash xxxxx.sh',
+	                          remark = 'test algorithm remark',
+	                          homepage = 'xxx.xxx.xxx.xxx/xxxx',
+	                          author = 'shihua',
+	                          authoremail = '15021408795@163.com',
+	                          license = 'MIT',
+	                          requires = 'numpy,sklearn,tensorflow',
+	                          requiredby = 'WPFsystem')
+
+	### 查询算法信息
+	tmp_algorithm_info_query = fiche.query_algorithm_info(algorithm_name='test008',algorithm_version='v008')
+	print(tmp_algorithm_info_query)
+
+	### 保存模型信息
+	fiche.save_model_info(name = 'test008',
+	                      version = 'v008',
+	                      summary = 'this is a test model',
+	                      config = 'bash xxxxxxx.sh',
+	                      remark = 'test model remark',
+	                      requires = 'test',
+	                      data = 'test data set',
+	                      algorithm = 'test algorithm')
+
+	### 查询模型信息
+	tmp_model_info_query = fiche.query_model_info(model_name='test008',model_version='v008')
+	print(tmp_model_info_query)
+
+	### 保存参数信息
+	fiche.save_parameter_info(name = 'test008',
+	                          version = 'v008',
+	                          summary = 'this is a test parameter',
+	                          config = 'bash xxxxxxxxxxx.sh',
+	                          remark = 'test parameter remark',
+	                          datatype = 'test datatype',
+	                          requiredby = 'test model')
+
+	### 查询参数信息
+	tmp_parameter_info_query = fiche.query_parameter_info(parameter_name='test008',parameter_version='v008')
+	print(tmp_parameter_info_query)
+
+	### 保存应用信息
+	fiche.save_application_info(name = 'test008',
+	                            version = 'v008',
+	                            summary = 'this is a test application',
+	                            config = 'bash xxxxxxxxxxxxx.sh',
+	                            remark = 'test application remark',
+	                            requires = 'xxx algorithm,xxxxx data',
+	                            project = 'wpf system')
+
+	### 查询应用信息
+	tmp_application_info_query = fiche.query_application_info(application_name='test008',application_version='v008')
+	print(tmp_application_info_query)
+
+	### 保存数据信息
+	fiche.save_dataset_info(name = 'test008',
+	                        version = 'v008',
+	                        summary = 'this is a test dataset',
+	                        config = 'bash xxxxxxxxxxxxx.sh',
+	                        remark = 'test dataset',
+	                        requiredby = 'test model,test application',
+	                        datatype = 'test datatype',
+	                        project = 'pv system')
+
+	### 查询数据信息
+	tmp_dataset_info_query = fiche.query_dataset_info(dataset_name='test008',dataset_version='v008')
+	print(tmp_dataset_info_query)
+```
+
+## 设计
++ 采用推送模型的观察者模式
++ 服务端使用HTTP协议构建操作服务
++ 信息卡片化，中心化
++  MongoDB文档型存储
+
+### 技术列表
++ 元编程技术-type元类技术
++ 元编程技术-__getattr__技术
++ 元编程技术-__setattr__技术
++ 元编程技术-__new__技术
++ 微服务-FastAPI
++ 配置文件-yaml技术
++ 数据库-MongoDB
++ 设计模式-观察者模式
+
+
+### 设计UML图
+以下是设计的UML图：
+![dashareuml](/static/FicheUML.png)
+

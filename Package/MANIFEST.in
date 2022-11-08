@@ -1,0 +1,3 @@
+include fiche/doc/README.mdown
+include fiche/fiche_config.yaml
+graft fiche/test

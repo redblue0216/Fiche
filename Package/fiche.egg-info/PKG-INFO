@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: fiche
+Version: 0.1
+Summary: Fiche is a metadata management tool with MongoDB about algorithm info,model info,parameter info,application info,dataset info and more;supporting http interface and python sdk.
+Author: shihua
+Author-email: hua.shi@meritech-data.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.9.12
+
+UNKNOWN
+
